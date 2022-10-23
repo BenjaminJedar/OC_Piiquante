@@ -1,11 +1,11 @@
 const express = require('express');
-const bcrypt = require('bcrypt');
 const router = express.Router();
-
-
 const userCtrl = require('../controllers/user');
 
+//Route pour la création d'un utilisateur
 router.post('/signup', userCtrl.signup);
+
+//Route pour la connexion d'un utilisateur
 router.post('/login', userCtrl.login);
 
 module.exports = router;
